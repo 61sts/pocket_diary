@@ -22,9 +22,6 @@ async def on_message(message):
 
 # =================================================DO_NOT_MESS=================================================    
 if len(sys.argv) > 1 and sys.argv[1] == "test":
-    load_dotenv(".gitignore\.env.test")
+    client.run(os.getenv("TEST_TOKEN"))
 else:
-    load_dotenv()
-
-DISCORD_TOKEN = os.getenv("TOKEN")
-client.run(DISCORD_TOKEN)
+    client.run(os.getenv("TOKEN"))
