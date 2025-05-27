@@ -1,0 +1,4 @@
+.env
+.env.test
+bot_env
+__pycache__
