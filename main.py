@@ -25,9 +25,11 @@ for filename in os.listdir("./cogs"):
 
 
 #*             =================================================DO_NOT_MESS=================================================    
-if len(sys.argv) > 1 and sys.argv[1] == "test":
-    bot.run(os.getenv("TEST_TOKEN"))
-else:
-    bot.run(os.getenv("TOKEN"))
+if __name__ == "__main__":
+
+    if len(sys.argv) > 1 and sys.argv[1] == "test":
+        bot.run(os.getenv("TEST_TOKEN"))
+    else:
+        bot.run(os.getenv("TOKEN"))
 
 # python main.py test
